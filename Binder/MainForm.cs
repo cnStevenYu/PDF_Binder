@@ -873,7 +873,7 @@ namespace Binder
 			string footer= "\x29\x3E\x3E\x0D\x0A\x65\x6E\x64\x6F\x62\x6A";
 
 			FileStream pdfFileStream = new FileStream(pdfFile, FileMode.Create, FileAccess.Write);
-            StreamWriter sw = new StreamWriter(pdfFileStream,Encoding.ASCII);
+            BinaryWriter sw = new BinaryWriter (pdfFileStream);
 
 			try{
 				sw.Write(header);
